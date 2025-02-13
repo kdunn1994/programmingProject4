@@ -36,6 +36,19 @@ li:hover {
   background-color: chartreuse;
 }
 
+.delete-btn {
+  margin-left: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: darkred;
+}
+
+
 .form-control {
   margin-bottom: 10px;
 }

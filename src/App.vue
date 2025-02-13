@@ -23,6 +23,11 @@ const handleExerciseSubmitted = (exerciseData) => {
   })
 }
 
+const handleExerciseDeleted = (id) => {
+  exercises.value = exercises.value.filter(exercises => exercises.id !== id)
+  selectedExercise.value = null
+}
+
 const generateID = () => {
   return Math.floor(Math.random() * 10000000)
 }
@@ -38,7 +43,12 @@ const totalCalories = computed(() => {
 <template>
   <Header></Header>
   <div class="container">
-    <ExerciseList :exercises="exercises" @exercise-selected="handleExerciseSelected"></ExerciseList>
+    <ExerciseList
+      :exercises="exercises"
+      @exercise-selected="handleExerciseSelected"
+      @exercise-deleted="handleExerciseDeleted">
+    </ExerciseList>
+
     <ExerciseDetails :selectedExercise="selectedExercise"></ExerciseDetails>
     <ExerciseSummary :totalCalories="totalCalories"></ExerciseSummary>
     <AddExercise @exerciseSubmitted="handleExerciseSubmitted"></AddExercise>
