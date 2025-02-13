@@ -3,6 +3,6 @@
 
 
 <template>
-    <h2>Personal Fitness Tracker</h2>
+    <h2 class="header-title">Personal Fitness Tracker</h2>
 
 </template>

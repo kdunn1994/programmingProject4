@@ -15,7 +15,7 @@
 </script>
 
 <template>
-    <h3>Exercise List</h3>
+    <h2>Exercise List</h2>
     <ul class="list">
         <li v-for="exercise in exercises" :key="exercise.id" @click="selectExercise(exercise)">
             {{ exercise.name }}

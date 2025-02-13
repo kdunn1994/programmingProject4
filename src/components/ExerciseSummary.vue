@@ -11,7 +11,7 @@ const props = defineProps({
 
 <template>
     <div>
-        <h1>Exercise Summary</h1>
+        <h2>Exercise Summary</h2>
         <p>Total Calories Burned: {{ totalCalories }}</p>
     </div>
 </template>
