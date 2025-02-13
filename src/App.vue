@@ -38,7 +38,7 @@ const totalCalories = computed(() => {
 <template>
   <Header></Header>
   <div class="container">
-    <ExerciseList @exercise-selected="handleExerciseSelected"></ExerciseList>
+    <ExerciseList :exercises="exercises" @exercise-selected="handleExerciseSelected"></ExerciseList>
     <ExerciseDetails :selectedExercise="selectedExercise"></ExerciseDetails>
     <ExerciseSummary :totalCalories="totalCalories"></ExerciseSummary>
     <AddExercise @exerciseSubmitted="handleExerciseSubmitted"></AddExercise>

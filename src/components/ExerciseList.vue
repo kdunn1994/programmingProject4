@@ -1,10 +1,12 @@
 <script setup>
-    import { ref, defineEmits } from 'vue'
+    import { defineProps, defineEmits } from 'vue'
 
-    const exercises = ref([
-        { id: 1, name: 'Running', duration: 30, calories: 300 },
-        { id: 2, name: 'Cycling', duration: 45, calories: 400 }
-    ])
+    const props = defineProps({
+        exercises: {
+            type: Array,
+            required: true
+        }
+    })
 
     const emit = defineEmits(['exercise-selected'])
 

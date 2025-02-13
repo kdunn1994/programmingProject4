@@ -1,4 +1,4 @@
-<script>
+<script setup>
 import { ref, defineEmits } from 'vue'
 
 const name = ref('')
